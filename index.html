@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <title>作品集-吴思</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* background-color: #ddd; */
+        }
+
+        .main-top {
+            width: 100%;
+            height: 550px;
+            background: url("img/top.jpg");
+            color: aliceblue;
+            line-height: 80px;
+            /* padding-left: 5% ; */
+            margin: auto;
+            background-size: 100% 800px;
+            background-position-y: 55%;
+            min-width: 1200px;
+        }
+
+        .main-content {
+            width: 100%;
+            height: 400px;
+            background-color: #ccc;
+            border: 20px double #fff;
+            min-width: 1200px;
+        }
+
+        .nav {
+            height: 80px;
+            background-color: rgba(0, 0, 0, 0.65);
+            margin-bottom: 20px;
+            color: #fff;
+            margin-bottom: 120px;
+        }
+
+        .cross {
+            width: 100%;
+            height: 550px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .face {
+            width: 160px;
+            height: 160px;
+            border: #fff solid 2px;
+            border-radius: 160px;
+            margin-left: 35%;
+            background: url("img/face.jpg");
+            background-size: 160px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            font-size: 20px;
+            display: inline-block;
+        }
+
+        .info {
+            display: inline-block;
+            background-size: 160px;
+            color: #fff;
+            font-weight: bold;
+            text-align: left;
+            font-size: 20px;
+            margin-left: 10%;
+        }
+
+        .info p {
+            position: relative;
+            top: 140px;
+        }
+
+        .name {
+            position: relative;
+            top: 150px;
+        }
+
+        .sample {
+            display: inline-block;
+            width: 20%;
+            height: 80%;
+            background-color: #fff;
+            margin: 40px 0 40px 4%;
+            border: solid 4px #fff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .title {
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .default {
+            position: absolute;
+            width: 1200px;
+            height: 800px;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+        }
+
+        .default-top {
+            width: 100%;
+            height: 40px;
+            background-color: #fff;
+        }
+
+        .default-title {
+            width: 1160px;
+            height: 40px;
+            float: left;
+            line-height: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            padding-left: 50px;
+            background-color: #666;
+            color: #fff;
+        }
+
+        .close {
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            float: left;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 40px;
+            background-color: #666;
+            color: #fff;
+        }
+
+        .close:hover {
+            background-color: #333;
+        }
+
+        .pictures {
+            position: relative;
+            float: left;
+            width: 1200px;
+            height: 760px;
+            background-color: #ccc;
+        }
+
+        .current {
+            max-height: 760px;
+            max-width: 1200px;
+            position: absolute;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .prev,
+        .next {
+            width: 150px;
+            height: 760px;
+            line-height: 760px;
+            font-size: 32px;
+            text-align: center;
+            position: absolute;
+            color: #555;
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            color: #fff
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-top">
+        <div class="cross">
+            <div class="nav">
+                <h1>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-book"></i> 作 品 集 &nbsp;&nbsp;&nbsp;&nbsp;Sample reels</h1>
+                <div class="face"><span class="name">吴 思</span></div>
+                <div class="info">
+                    <p><i class="fa fa-graduation-cap"></i> 毕业院校：北方工业大学</p>
+                    <p><i class="fa fa-flag"></i> 专业：景观建筑（本科）</p>
+                    <p><i class="fa fa-envelope-o"></i> 邮箱：2274457725@qq.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="sample" onclick="showDefult(event)"
+            style="background:url('img/list1.jpg');background-size:100% 280px;">
+            <div class="title">大学课设作品</div>
+        </div>
+        <div class="sample" onclick="showDefult(event)"
+            style="background:url('img/list2.jpg');background-size:100% 280px;">
+            <div class="title">社会实践汇报</div>
+        </div>
+        <div class="sample" onclick="showDefult(event)"
+            style="background:url('img/list3.png');background-size:100% 280px;">
+            <div class="title">我的培训课堂</div>
+        </div>
+        <div class="sample" onclick="showDefult(event)"
+            style="background:url('img/list4.jpg');background-size:100% 280px;">
+            <div class="title">陈列师之路</div>
+        </div>
+    </div>
+    <div class="default">
+        <div class="default-top">
+            <div class="default-title">大学课设作品</div>
+            <div class="close" onclick="closeDeafult()">×</div>
+            <div class="pictures">
+                <img class="current" src="img/list4.jpg" alt="">
+                <div class="prev" onclick="toPrev()"><i class="fa fa-chevron-left"></i></div>
+                <div class="next" onclick="toNext()"><i class="fa fa-chevron-right"></i></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let showDefult = function (e) {
+            let target = e.target;
+            let title = '';
+            document.querySelector('.default').style.display = 'block';
+            if (target.className == 'title') {
+                title = target.innerHTML;
+            } else {
+                title = target.firstElementChild.innerHTML;
+            }
+            document.querySelector('.default-title').innerHTML = title;
+            if (title == '大学课设作品') {
+                currentList = list1;
+            } else if (title == '社会实践汇报') {
+                currentList = list2;
+            }else if(title=='我的培训课堂'){
+                currentList = list3;
+            }else if(title=='陈列师之路'){
+                currentList = list4;
+            }
+            page=0;
+            document.querySelector('.current').src = currentList[page];
+        }
+        let closeDeafult = function () {
+            document.querySelector('.default').style.display = 'none'
+        }
+        let toPrev = function () {
+            if (page == 0) {
+                return alert('已经是第一张了哦')
+            } else {
+                page--;
+                document.querySelector('.current').src = currentList[page];
+            }
+        }
+        let toNext = function () {
+            if (page == (currentList.length-1)) {
+                return alert('已经是最后一张了哦')
+            } else {
+                page++;
+                document.querySelector('.current').src = currentList[page];
+            }
+        }
+        let page = 0;
+        let currentList = [];
+        let list1 = ['img/list1-1.jpg', 'img/list1-2.jpg']
+        let list2 = ['img/list2-1.jpg', 'img/list2-2.jpg', 'img/list2-3.jpg']
+        let list3 = ['img/list3-1.png','img/list3-2.png','img/list3-3.png','img/list3-4.png','img/list3-5.png','img/list3-6.png','img/list3-7.png','img/list3-8.png','img/list3-9.png','img/list3-10.png',
+        'img/list3-11.png','img/list3-12.png','img/list3-13.png','img/list3-14.png','img/list3-15.png','img/list3-16.png','img/list3-17.png','img/list3-18.png','img/list3-19.png','img/list3-20.png',
+        'img/list3-21.png','img/list3-22.png','img/list3-23.png','img/list3-24.png','img/list3-25.png','img/list3-26.png','img/list3-27.png','img/list3-28.png','img/list3-29.png','img/list3-30.png','img/list3-31.png']
+        let list4 = ['img/list4-1.jpg', 'img/list4-2.jpg', 'img/top.jpg', 'img/list4-3.jpg', 'img/list4-4.jpg', 'img/list4-6.jpg', 'img/list4-7.jpg', 'img/list4-8.jpg','img/list4-5.jpg', 'img/list4.jpg']
+    </script>
+</body>
+
+</html>
